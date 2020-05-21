@@ -1,0 +1,68 @@
+
+
+.box-set {
+  position: relative;
+  height: 800px;
+  background: darkgray;
+}
+
+.picture {
+  top: 5%;
+  left: 15%;
+  height: 100px; width: 200px;
+  overflow: hidden;
+}
+.header {
+
+  left: 45%;
+  background: black;
+  color : white;
+}
+
+
+
+
+
+
+
+.box {
+  position: fixed;
+  
+  margin: auto;
+}
+
+/* Box rules: percentages define anchors (i.e. position of each box relative to browser window) */
+
+
+.center {
+  top: 40%;
+  left: 40%;
+  margin: auto;
+   font-size: 40px;;
+}
+
+
+.box-1 {
+  top: 0;
+  left: 0;
+font-size: 30px;
+}
+
+.box-2 {
+  top: 47%;
+  left: 40%;
+   font-size: 25px;
+}
+
+.box-3 {
+  right: 0;
+  bottom: 0px;
+   font-size: 20px;
+}
+
+.box-4 {
+  top: 40%;
+  left:0;
+   font-size: 15px;
+}
+
