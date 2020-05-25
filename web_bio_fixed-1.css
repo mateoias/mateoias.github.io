@@ -1,0 +1,69 @@
+/*
+ * Relative Position: sets boxes relative to its original location
+ * (i.e. below or left of where the element would normally be)
+ */
+
+.box-set {
+  position: fixed;
+  height: 1500px;
+  width: 100%;
+  background: darkgray;
+}
+.header {
+  position: fixed;
+  background-color: blue;
+height : 50px;
+width: 100%;
+text-align:center;
+font-size:30px;
+color: white;
+margin: 0px;
+}
+.box-1 {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin-top: 50px;
+  margin-left:20%;
+  margin-right:40%;
+  font-size: 14px;
+  text-align:left;
+  border:2px solid black;
+}
+.box-2 {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-top: -300px;
+  margin-left:100%;
+  margin-right: 10%;
+  font-size: 14px;
+  text-align:left;
+  border:2px solid black;
+}
+.box-3 {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  margin-left: 20%;
+  margin-top:0px;
+  font-size: 14px;
+  text-align:left;
+  border:2px solid black;
+}
+
+.picture {
+  position: relative;
+  float: left;
+  margin: 5px;
+  height: 200px; 
+   width: 150px;
+}
+.caption {
+  position: absolute;
+  top: 190px;
+  left: 40px;
+  text-align: center;
+  color: white;
+  /* z-index : 2; */
+} 
