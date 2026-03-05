@@ -1,98 +1,180 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6GC546JX3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Werth</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@5"></script>
+    
+    <!-- Google Analytics (keep your existing) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6GC546JX3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K6GC546JX3');
+    </script>
 
-  gtag('config', 'G-K6GC546JX3');
-</script>
-  
-  <meta charset="UTF-8">
-  <title>Matt Werth bio</title>
- 
-  <link rel="stylesheet" href="web_bio_fixed-1.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .photo {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .photo:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white text-xl font-bold heading">MW</div>
+                <div>
+                    <div class="font-semibold heading text-2xl tracking-tight">Matt Werth</div>
+                    <div class="text-xs text-zinc-500 dark:text-zinc-400 -mt-1">Student • Linguist • Developer</div>
+                </div>
+            </div>
 
-<body>
-  <div class = "box-set" >
+            <!-- Dark mode toggle -->
+            <button id="theme-toggle" class="p-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                <span id="sun" class="text-2xl">☀️</span>
+                <span id="moon" class="text-2xl hidden">🌙</span>
+            </button>
+        </div>
+    </nav>
 
-  <p class="header"> Student Bio</p>
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Hero -->
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/3 flex-shrink-0">
+                <img src="picture.jpg" alt="Matthew Werth" class="photo w-72 h-72 object-cover rounded-3xl shadow-2xl mx-auto md:mx-0 ring-1 ring-zinc-200 dark:ring-zinc-800">
+            </div>
 
-    <div class="box-1">     
-      <img class = " picture" src= "picture.jpg" 
-      alt = "practice picture">
-          <div class="caption"> Matthew Werth</div>
-  有子曰：「其為人也孝弟，而好犯上者，鮮矣；不好犯上，而好作亂者，未之有也。君子務本，本立而道生。孝弟也者，其為仁之本與！」
-  <p> 
-  Xue Er:
-  The philosopher You said, "They are few who, being filial and fraternal, are fond of offending against their superiors.
-  There have been none, who, not liking to offend against their superiors, have been fond of stirring up confusion. The
-  superior man bends his attention to what is radical. That being established, all practical courses naturally grow up.
-  Filial piety and fraternal submission! - are they not the root of all benevolent actions?"
-  </p>
-  <p>
-    道可道，非常道。名可名，非常名。無名天地之始；有名萬物之母。故常無欲，以觀其妙；常有欲，以觀其徼。此兩者，同出而異名，同謂之玄。玄之又玄，衆妙之門。
-    
-  </p>
-    
-    <div class = "box-2">
-          <ul>
-            <li>
-              <strong> Contact Info</strong>
-            </li>
-            <li>
-              <a href="mailto:mateoias@hotmail.com" target = "_blank">mateoias@hotmail.com</a>
-            </li>
-            <li>
-              <a href= "https://github.com/mateoias"> github </a> 
-            </li>
-            <li> 
-              <a href = "https://www.linkedin.com/in/matt-werth/"> linked in</a> 
-            </li>
+            <div class="md:w-2/3 space-y-6">
+                <div>
+                    <div class="uppercase text-blue-600 dark:text-blue-500 text-sm font-medium tracking-widest">Student Bio</div>
+                    <h1 class="heading text-6xl font-bold tracking-tighter mt-1">Matthew Werth</h1>
+                </div>
+
+                <div class="prose dark:prose-invert max-w-none text-lg">
+                    <p>Long-term language and linguistics lover now looking for a new career at the intersection of language, linguistics and technology.</p>
+                    
+                    <div class="pt-4 border-t border-zinc-200 dark:border-zinc-800 mt-6">
+                        <blockquote class="italic border-l-4 border-zinc-300 dark:border-zinc-700 pl-4 text-zinc-600 dark:text-zinc-400">
+                            有子曰：「其為人也孝弟，而好犯上者，鮮矣；不好犯上，而好作亂者，未之有也。君子務本，本立而道生。孝弟也者，其為仁之本與！」
+                        </blockquote>
+                        <p class="text-sm text-zinc-500 mt-2">— Xue Er (The philosopher You said... filial piety and fraternal submission are the root of all benevolent actions)</p>
+                    </div>
+
+                    <div class="pt-4 mt-4">
+                        <blockquote class="italic border-l-4 border-zinc-300 dark:border-zinc-700 pl-4 text-zinc-600 dark:text-zinc-400">
+                            道可道，非常道。名可名，非常名。無名天地之始；有名萬物之母...
+                        </blockquote>
+                        <p class="text-sm text-zinc-500 mt-2">— Dao De Jing (The Dao that can be told is not the eternal Dao...)</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <a href="mailto:mateoias@hotmail.com" class="flex-1 bg-zinc-900 hover:bg-black dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 transition-colors text-white px-6 py-3 rounded-2xl font-medium flex items-center justify-center gap-2">
+                        📧 Email Me
+                    </a>
+                    <a href="https://github.com/mateoias" target="_blank" class="flex-1 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 px-6 py-3 rounded-2xl font-medium flex items-center justify-center gap-2 transition-colors">
+                        GitHub →
+                    </a>
+                    <a href="https://www.linkedin.com/in/matt-werth/" target="_blank" class="flex-1 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 px-6 py-3 rounded-2xl font-medium flex items-center justify-center gap-2 transition-colors">
+                        LinkedIn →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="mt-24">
+            <div class="uppercase text-xs tracking-widest text-zinc-500 dark:text-zinc-400 font-medium mb-4">INTERESTS</div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8">
+                    <div class="text-blue-600 dark:text-blue-500 text-4xl mb-4">📚</div>
+                    <div class="font-semibold text-xl heading mb-3">Books</div>
+                    <ul class="space-y-2 text-zinc-600 dark:text-zinc-400">
+                        <li>The Goalie's Anxiety at the Penalty Kick</li>
+                        <li>Stranger in a Strange Land</li>
+                        <li>High Lonesome</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8">
+                    <div class="text-rose-600 dark:text-rose-500 text-4xl mb-4">🎥</div>
+                    <div class="font-semibold text-xl heading mb-3">Movies</div>
+                    <ul class="space-y-2 text-zinc-600 dark:text-zinc-400">
+                        <li>Pump up the Volume</li>
+                        <li>Cars</li>
+                        <li>High School Musical</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8">
+                    <div class="text-emerald-600 dark:text-emerald-500 text-4xl mb-4">🎮</div>
+                    <div class="font-semibold text-xl heading mb-3">Games</div>
+                    <ul class="space-y-2 text-zinc-600 dark:text-zinc-400">
+                        <li>Uno</li>
+                        <li>MTG</li>
+                        <li>D&D</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class = "box-3">
-  
-    </ul>
-    <table>
-      <tr>
-        <th> Books</th>
-        <th> Movies</th>
-        <th> Games</th>
-      </tr>
-      <tr>
-        <th> The Goalie's Anxiety at the Penalty Kick</th>
-        <th> Pump up the Volume</th>
-        <th> Uno</th>
-      </tr>
-      <tr>
-        <th> Stranger in a Strange Land</th>
-        <th> Cars</th>
-        <th> MTG</th>
-      </tr>
-      <tr>
-        <th> High Lonesome</th>
-        <th> High School Musical</th>
-        <th> D&D</th>
-      </tr>
-  
-    </table>
-  
-  
-  </div>
-    
-    
-    <!-- <figure class="box box-2">Box 2 Goes under Box 1</figure> -->
-    <!-- <figure class="box box-3">Box goes in the top left 3</figure>
-    <figure class="box box-4">Box 4 goes in the bottom right </figure> -->
-  <!-- </div> -->
-</body>
 
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 mt-24 py-12 bg-white dark:bg-zinc-950">
+        <div class="max-w-5xl mx-auto px-6 text-center text-zinc-500 dark:text-zinc-400 text-sm">
+            © Matthew Werth • Built with Tailwind CSS
+        </div>
+    </footer>
+
+    <!-- Dark mode toggle script -->
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const sun = document.getElementById('sun');
+        const moon = document.getElementById('moon');
+
+        // Check for saved preference or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+        } else {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+        }
+
+        toggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+                sun.classList.add('hidden');
+                moon.classList.remove('hidden');
+            } else {
+                localStorage.theme = 'light';
+                sun.classList.remove('hidden');
+                moon.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
 </html>
